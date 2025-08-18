@@ -2,7 +2,6 @@
 vim.opt.termguicolors = true
 vim.opt.signcolumn = 'yes'
 vim.opt.cursorline = true
-vim.opt.winborder = 'rounded'
 
 -- line numbers
 vim.opt.number = true

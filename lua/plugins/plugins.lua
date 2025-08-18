@@ -15,7 +15,7 @@ return {
     -- git integration
     { "lewis6991/gitsigns.nvim", opts = {} },
     
-    -- treesitter 
+    -- syntax highlighting
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
@@ -29,6 +29,62 @@ return {
         ---@module "ibl"
         ---@type ibl.config
         opts = {}
-    }
+    },
+    
+    -- LSP's
+    {
+        "williamboman/mason.nvim",
+        build = ":MasonUpdate",
+        opts = {},
+    },
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            require "plugins.configs.lspconfig"
+        end,
+    },
+    {
+        "mason-org/mason-lspconfig.nvim",
+        dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
+        config = function()
+            require("mason-lspconfig").setup({
+                ensure_installed = {
+                    "lua_ls",
+                    "pyright",
+                    "ts_ls",
+                    "bashls",
+                    "html",
+                    "cssls",
+                    "emmet_ls",
+                    "rust_analyzer",
+                    "gopls",
+                },
+            })
+        end,
+    },
 
+    -- autocomplete
+    {
+        "saghen/blink.cmp",
+        version = '1.*',
+        dependencies = {
+            "rafamadriz/friendly-snippets",
+
+            -- snippets engine
+            {
+                "L3MON4D3/LuaSnip",
+                config = function()
+                    require("luasnip.loaders.from_vscode").lazy_load()
+                end,
+            },
+
+            -- autopairs , autocompletes ()[] etc
+            { "windwp/nvim-autopairs", opts = {} },
+        },
+        event = "InsertEnter",
+
+        ---@module 'blink.cmp'
+        ---@type blink.cmp.Config
+        opts = { keymap = { preset = 'super-tab' } }
+    }
 }
