@@ -22,6 +22,11 @@ map("i", "<C-l>", "<Right>", { desc = "move right" })
 map("i", "<C-j>", "<Down>", { desc = "move down" })
 map("i", "<C-k>", "<Up>", { desc = "move up" })
 
+-- buffers
+map("n", "[b", "<cmd>bprevious<CR>", { desc = "Prev buffer" })
+map("n", "]b", "<cmd>bnext<CR>", { desc = "Next buffer" })
+map("n", "<leader>b", "<cmd> FzfLua buffers <CR>")
+
 -- search
 map("n", "<leader>/", ":nohlsearch<CR>")
 
