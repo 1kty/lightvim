@@ -1,6 +1,6 @@
 -- ui
 vim.opt.termguicolors = true
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
 vim.opt.winborder = "rounded"
 
@@ -15,9 +15,10 @@ vim.opt.ruler = false
 vim.opt.wrap = false
 vim.opt.scrolloff = 4
 vim.opt.sidescrolloff = 8
+vim.opt.updatetime = 250
 
 -- mouse support
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 
 -- indentation
 vim.opt.expandtab = true
@@ -36,4 +37,4 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- system keyboard sync
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"

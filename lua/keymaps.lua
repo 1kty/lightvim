@@ -1,11 +1,11 @@
 local map = vim.keymap.set
 
 -- leader key
-vim.g.mapleader = ' '
+vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- -- mappings
-map({'n', 'v'}, ';', ':', { noremap = true, silent = false })
+map({ "n", "v" }, ";", ":", { noremap = true, silent = false })
 map("n", "<C-s>", "<cmd> w <CR>")
 map("i", "jk", "<ESC>")
 
@@ -23,7 +23,7 @@ map("i", "<C-j>", "<Down>", { desc = "move down" })
 map("i", "<C-k>", "<Up>", { desc = "move up" })
 
 -- search
-map('n', '<leader>/', ':nohlsearch<CR>')
+map("n", "<leader>/", ":nohlsearch<CR>")
 
 -- nvim-tree
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
