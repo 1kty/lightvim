@@ -44,4 +44,4 @@ end
 enable_diag_float()
 
 -- Keymap: <leader>d to toggle
-vim.keymap.set("n", "<leader>d", toggle_diag_float, { desc = "Toggle floating diagnostics" })
+vim.keymap.set("n", "<leader>dt", toggle_diag_float, { desc = "Toggle floating diagnostics" })
