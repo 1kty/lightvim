@@ -2,6 +2,7 @@ local map = vim.keymap.set
 
 -- leader key
 vim.g.mapleader = ' '
+vim.g.maplocalleader = " "
 
 -- -- mappings
 map({'n', 'v'}, ';', ':', { noremap = true, silent = false })
