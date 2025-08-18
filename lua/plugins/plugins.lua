@@ -43,25 +43,6 @@ return {
             require "plugins.configs.lspconfig"
         end,
     },
-    {
-        "mason-org/mason-lspconfig.nvim",
-        dependencies = { "williamboman/mason.nvim", "neovim/nvim-lspconfig" },
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "lua_ls",
-                    "pyright",
-                    "ts_ls",
-                    "bashls",
-                    "html",
-                    "cssls",
-                    "emmet_ls",
-                    "rust_analyzer",
-                    "gopls",
-                },
-            })
-        end,
-    },
 
     -- autocomplete
     {
@@ -85,6 +66,16 @@ return {
 
         ---@module 'blink.cmp'
         ---@type blink.cmp.Config
-        opts = { keymap = { preset = 'super-tab' } }
+        opts = function()
+            return require "plugins.configs.blink"
+        end,
+    },
+
+    -- formatting
+    {
+        'stevearc/conform.nvim',
+        config = function()
+            require "plugins.configs.conform"
+        end,
     }
 }

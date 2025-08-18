@@ -6,6 +6,8 @@ vim.g.maplocalleader = " "
 
 -- -- mappings
 map({'n', 'v'}, ';', ':', { noremap = true, silent = false })
+map("n", "<C-s>", "<cmd> w <CR>")
+map("i", "jk", "<ESC>")
 
 -- navigation
 map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
