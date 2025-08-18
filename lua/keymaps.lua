@@ -8,6 +8,9 @@ vim.g.maplocalleader = " "
 map({ "n", "v" }, ";", ":", { noremap = true, silent = false })
 map("n", "<C-s>", "<cmd> w <CR>")
 map("i", "jk", "<ESC>")
+vim.keymap.set("n", "<leader>d", function()
+  vim.diagnostic.open_float(nil, { focusable = false })
+end, { desc = "Show line diagnostics" })
 
 -- navigation
 map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
@@ -38,4 +41,4 @@ map("n", "<leader>ff", "<cmd> FzfLua files <CR>")
 map("n", "<leader>fo", "<cmd> FzfLua oldfiles <CR>")
 map("n", "<leader>fw", "<cmd> FzfLua live_grep <CR>")
 map("n", "<leader>gt", "<cmd> FzfLua git_status <CR>")
-map("n", "<leader>da", "<cmd> FzfLua diagnostics_document <CR>")
+map("n", "<leader>ad", "<cmd> FzfLua diagnostics_document <CR>")
