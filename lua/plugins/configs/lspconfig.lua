@@ -40,6 +40,30 @@ capabilities.textDocument.completion.completionItem = {
 }
 
 vim.lsp.config("*", { capabilities = capabilities })
-local servers = { "lua_ls", "pyright", "ts_ls", "bashls", "html", "cssls", "emmet_ls", "rust_analyzer", "gopls" }
+local servers = { 
+  -- js/ts
+  "ts_ls",
+  -- web 
+  "html", 
+  "cssls", 
+  "emmet_ls", 
+  -- python 
+  "pyright", 
+  -- lua
+  "lua_ls",
+  -- rust
+  "rust_analyzer", 
+  -- go
+  "gopls", 
+  -- c/cpp
+  "clangd", 
+  -- useful
+  "jsonls", 
+  "yamlls", 
+  "marksman", 
+  "bashls", 
+  "sqls", 
+  "texlab" 
+}
 
 vim.lsp.enable(servers)

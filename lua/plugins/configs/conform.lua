@@ -1,10 +1,17 @@
 require("conform").setup({
   formatters_by_ft = {
+    javascript = { "prettierd" },
+    typescript = { "prettierd" },
+    html = { "prettierd" },
+    css = { "prettierd" },
+    python = { "ruff_format", "ruff_organize_imports" },
     lua = { "stylua" },
-    javascript = { "prettier" },
-    typescript = { "prettier" },
-    json = { "prettier" },
-    python = { "ruff_fix", "ruff_format", "ruff_organize_imports" }
+    rust = { "rustfmt" },
+    c = { "clang-format" },
+    cpp = { "clang-format" },
+    json = { "prettierd" },
+    yaml = { "prettierd" },
+    markdown = { "prettierd" },
   },
 })
 
