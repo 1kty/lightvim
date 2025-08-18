@@ -16,7 +16,8 @@ vim.pack.add({
     { src = "https://github.com/nvim-tree/nvim-web-devicons" }, -- icons for file browser
     { src = "https://github.com/nvim-lualine/lualine.nvim" }, -- status line
     { src = "https://github.com/lewis6991/gitsigns.nvim" }, -- git integration
-
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" }, -- treesitter support
+    { src = "https://github.com/lukas-reineke/indent-blankline.nvim" } -- treesitter indentation lines
 })
 
 -- set theme
@@ -24,4 +25,6 @@ vim.cmd(":colorscheme oldworld")
 
 -- enable plugins
 require("nvim-tree").setup()
-require("plugins.lualine")
+require("lualine").setup()
+require("plugins.treesitter")
+require("ibl").setup()
