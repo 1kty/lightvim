@@ -71,6 +71,14 @@ return {
         end,
     },
 
+    -- linting
+    {
+        "mfussenegger/nvim-lint",
+        config = function()
+            require "plugins.configs.nvim-lint"
+        end,
+    },
+
     -- formatting
     {
         'stevearc/conform.nvim',
