@@ -9,6 +9,13 @@ return {
 		end,
 	},
 
+	-- picker
+	{
+		"ibhagwan/fzf-lua",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {}
+	},	
+
 	-- keymap ui
 	{
 		"folke/which-key.nvim",

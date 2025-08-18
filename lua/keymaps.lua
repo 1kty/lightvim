@@ -27,3 +27,10 @@ map("n", "<leader>/", ":nohlsearch<CR>")
 
 -- nvim-tree
 map("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
+
+-- fzf-lua
+map("n", "<leader>ff", "<cmd> FzfLua files <CR>")
+map("n", "<leader>fo", "<cmd> FzfLua oldfiles <CR>")
+map("n", "<leader>fw", "<cmd> FzfLua live_grep <CR>")
+map("n", "<leader>gt", "<cmd> FzfLua git_status <CR>")
+map("n", "<leader>D", "<cmd> FzfLua diagnostics_document <CR>")
