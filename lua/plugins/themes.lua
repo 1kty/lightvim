@@ -1,13 +1,17 @@
 return {
-	-- themes
-	{ "dgox16/oldworld.nvim" },
+	{ "slugbyte/lackluster.nvim" },
+	-- alt themes
+	{ "catppuccin/nvim" },
 	{ "folke/tokyonight.nvim" },
-	{ "rebelot/kanagawa.nvim" },
+	{ "rose-pine/neovim" },
 	{ "EdenEast/nightfox.nvim" },
 	{ "navarasu/onedark.nvim" },
 	{ "Mofiqul/vscode.nvim" },
-	{ "datsfilipe/vesper.nvim" },
-	{ "slugbyte/lackluster.nvim" },
+	{ "rebelot/kanagawa.nvim" },
+	{ "olivercederborg/poimandres.nvim" },
 	{ "mellow-theme/mellow.nvim" },
-	{ "zenbones-theme/zenbones.nvim" },
+	{ "dgox16/oldworld.nvim" },
+	{ "datsfilipe/vesper.nvim" },
+	{ "ficcdaf/ashen.nvim" },
+	{ "kdheepak/monochrome.nvim" },
 }

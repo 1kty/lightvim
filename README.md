@@ -13,8 +13,8 @@
 - [x] linting support
 - [x] formatting support
 - [x] which-key
-- [ ] fzf-lua
-- [ ] buffer managament
+- [x] fzf-lua
+- [x] buffer managament
 - [ ] consistent ui theme
 - [ ] re-organize file structure
 - [ ] optimize lazy

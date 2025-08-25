@@ -13,8 +13,8 @@ return {
 	{
 		"ibhagwan/fzf-lua",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		opts = {}
-	},	
+		opts = {},
+	},
 
 	-- keymap ui
 	{
@@ -38,6 +38,32 @@ return {
 	-- git integration
 	{ "lewis6991/gitsigns.nvim", opts = {} },
 
+	-- breadcrumbs
+	{ "Bekaboo/dropbar.nvim", opts = {} },
+
+	-- dashboard
+	{
+		"nvimdev/dashboard-nvim",
+		event = "VimEnter",
+		config = function()
+			require("plugins.configs.dashboard-nvim")
+		end,
+	},
+
+	-- animations
+	{
+		"rachartier/tiny-glimmer.nvim",
+		event = "VeryLazy",
+		priority = 10, -- Needs to be a really low priority, to catch others plugins keybindings.
+		opts = {
+			overwrite = {
+				paste = { default_animation = "fade" },
+				undo = { enabled = true },
+				redo = { enabled = true },
+			}
+		}
+	},
+
 	-- syntax highlighting
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -51,7 +77,7 @@ return {
 		main = "ibl",
 		---@module "ibl"
 		---@type ibl.config
-		opts = {},
+		opts = { indent = { char = "▏" }, exclude = { filetypes = { "dashboard" } } },
 	},
 
 	-- LSP's
