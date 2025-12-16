@@ -20,10 +20,10 @@ vim.opt.updatetime = 250
 vim.opt.mouse = "a"
 
 -- indentation
-vim.opt.expandtab = true
 vim.opt.smartindent = true
-vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
+vim.opt.softtabstop = -1
+vim.opt.expandtab = true
 
 -- file saving
 vim.opt.autowrite = true
